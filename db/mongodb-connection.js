@@ -1,9 +1,12 @@
-const {MongoClient} = require("mongodb");
-const {mongoURI} = require("../config/config.js");
+// mongodb-connection.js
 
-const dbName = 'products';
+const { MongoClient } = require("mongodb");
+const { mongoURI } = require("../config/config.js");
 
-// create mongoDB client
-const client = new MongoClient(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true });
+// create mongoDB client con la URI importada
+const client = new MongoClient(mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 module.exports = client;
